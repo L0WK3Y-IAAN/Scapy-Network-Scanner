@@ -1,8 +1,0 @@
-- "import scapy.all as scapy" and "import subprocess"
-- Create a function that takes "ip" as the parameter "you can name the parameter whatever you like"
-- In the function use the subprocess and its call function "subprocess.call(['clear'])" to clear the terminal everytime the program is run
-- Create a variable (arp_request) with the value "scapy.ARP(pdst=ip)" #Uses the ip parameter set at the beginning of the function
-- Create a variable (arp_request) with the value "scapy.Ether(dst="ff:ff:ff:ff:ff:ff")"
-- Bind the broadcast and arp_request with the bind feature within the scapy package "/" # "broadcast/arp_request"
-- Create a variable with the value of "scapy.srp(packet, timeout=1, verbose=False)[0] #Timeout creates a 1 second interval inbetween when packets are sent, verbose=False disables the packet status message 
-
