@@ -70,7 +70,7 @@ if platform.system() == "Linux":
                             time.sleep(1)  # Remove on pro upgrade
                             # Creates an Object (dictionary) of the element data
                             client_dict = {
-                                "IP": element[1].psrc, "MAC": element[1].hwsrc, "Vendor": response}
+                                "IP": element[1].psrc, "MAC": element[1].hwsrc, "Vendor": response.decode()}
 
                             # Appends the object (dictionary) to the array(list)
                             clients_list.append(client_dict)
@@ -84,8 +84,7 @@ if platform.system() == "Linux":
                         print("\n_______________________________________________________________________________________________\nIP\t\t\tMAC Address\t\t\tVendor\n-----------------------------------------------------------------------------------------------\n")
                         for client in results_list:
                             time.sleep(.2)
-                            print(client["IP"] + "\t\t" +
-                                  client["MAC"] + "\t\t" + client["Vendor"])
+                            print(client["IP"] + "\t\t" + client["MAC"] + "\t\t" + client["Vendor"])
 
                         # scapy.ls(broadcast) #Uses scapy's ls or list function to list possible options ex. IP, Ether, etc
                         # arp_request_broadcast.show() #Shows the details of this packet
